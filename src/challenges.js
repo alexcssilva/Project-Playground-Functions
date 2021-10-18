@@ -8,14 +8,18 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  if ( base && height) {
-    return (base * height) / 2
+  if (base && height) {
+    return (base * height) / 2;
   }
 }
-console.log(calcArea(10, 50))
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = [];
+  if (string) {
+    array = string.split(' ');
+    return array;
+  }
 }
 
 // Desafio 4
