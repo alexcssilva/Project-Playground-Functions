@@ -24,19 +24,14 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let firstName = '';
-  let lastName = '';
-  if (array) {
-    firstName = array[0];
-    return lastName = array[array.length - 1] + ', ' + firstName;
-  }
+  return array[0] + ', ' + array[array.length - 1];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins * 3 + ties;
 }
-
+console.log(footballPoints(14, 8));
 // Desafio 6
 function highestCount() {
   // seu código aqui
