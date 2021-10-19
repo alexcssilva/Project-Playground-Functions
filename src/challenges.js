@@ -23,8 +23,13 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let firstName = '';
+  let lastName = '';
+  if (array) {
+    firstName = array[0];
+    return lastName = array[array.length - 1] + ', ' + firstName;
+  }
 }
 
 // Desafio 5
