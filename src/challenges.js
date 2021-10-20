@@ -24,17 +24,30 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return array[0] + ', ' + array[array.length - 1];
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return wins * 3 + ties;
 }
-console.log(footballPoints(14, 8));
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highNumber = array[0];
+  let repeatNumber = 0;
+
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] > highNumber) {
+      highNumber = array[i];
+    }
+  }
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i] == highNumber) {
+      repeatNumber += 1;
+    }
+  }
+  return repeatNumber;
 }
 
 // Desafio 7
