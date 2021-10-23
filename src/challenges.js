@@ -112,6 +112,7 @@ function decode(phrase) {
     }
   }
   return phrase;
+}
 
 module.exports = {
   calcArea,
