@@ -69,29 +69,49 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let arrayString = [];
+  let text = '';
 
-  for (let number of arrayNumber) {
-    if (number % 3 == 0 && number % 5 == 0) {
-      arrayString.push('fizzBuzz');
-    } else if (number % 3 != 0 && number % 5 != 0) {
-      arrayString.push('bug!')
-    } else if (number % 5 == 0) {
-      arrayString.push('buzz');
-    } else if (number % 3 == 0) {
-      arrayString.push('fizz');
+  for (const number of arrayNumber) {
+      text = 'bug!';
+    if (number % 3 === 0 && number % 5 === 0) {
+      text = 'fizzBuzz';
+    } else if (number % 5 === 0) {
+      text = 'buzz';
+    } else if (number % 3 === 0) {
+      text = 'fizz';
     }
+    arrayString.push(text);
   }
   return arrayString;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let vowelsIndex = 0;
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  for (const letter of phrase) {
+    if (vowels.includes(letter)) {
+      vowelsIndex = vowels.indexOf(letter);
+      vowelsIndex += 1;
+      phrase = phrase.replace(letter, vowelsIndex);
+    }
+  }
+  return phrase;
 }
-function decode() {
-  // seu código aqui
-}
+
+function decode(phrase) {
+  let vowelsIndex = 0;
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+  for (const letter of phrase) {
+    if (letter <= vowels.length && letter > 0) {
+      vowelsIndex = letter;
+      vowelsIndex -= 1;
+      phrase = phrase.replace(letter, vowels[vowelsIndex]);
+    }
+  }
+  return phrase;
 
 module.exports = {
   calcArea,
